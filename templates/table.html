@@ -1,0 +1,19 @@
+<table class="table table-striped">
+  <thead>
+    <tr>
+      {% for col_title in col_titles_list %}
+      <th scope="col">{{col_title}}</th>
+      {% endfor %}
+    </tr>
+  </thead>
+  <tbody>
+      {% for row_vals_list in row_vals_lists %}
+        <tr>
+          <th scope="row">{{loop.index}}</th>
+          {% for row_val in row_vals_list %}
+            <td>{{row_val}}</td>
+          {% endfor %}
+        </tr>
+      {% endfor %}
+  </tbody>
+</table>

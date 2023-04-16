@@ -1,0 +1,7 @@
+{% extends "base.html" %}
+{% block title %}View All Users{% endblock %}
+{% block content %}
+    {% for user in users %}
+        <p>Name: {{user.email}}, Date Joined: {{user.date_joined}}</p>
+    {% endfor %}
+{% endblock %}

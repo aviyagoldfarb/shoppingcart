@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% block title %}Shopping Assistant{% endblock %}
+{% block content %}
+{% with messages = get_flashed_messages() %}
+    {% if messages %}
+        {% for message in messages %}
+            <p>{{message}}</p>
+        {% endfor %}
+    {% endif %}
+{% endwith %}
+<h1>Hello {{user}}!</h1>
+{% if products_num is not none %}
+<h2>Currently you have {{products_num}} products in the shopping cart.</h2>
+{% endif %}
+<h3>Please select the desired action:</h3>
+<ul class="menu">
+    <li><a href="{{ url_for('add_product') }}">Add Product</a></li>
+    <li><a href="{{ url_for('update_product') }}">Update Product</a></li>
+    <li><a href="{{ url_for('remove_product') }}">Remove Product</a></li>
+    <li><a href="{{ url_for('view_shopping_list') }}">View Shopping List</a></li>
+</ul>
+{% endblock %}
+
+<form action="#" method="post">
+    <p>Email:</p>
+    <input type="email" name="email" placeholder="Enter your email" value="{{email if email}}">
+    <input type="submit" name="submit"/>
+</form>
