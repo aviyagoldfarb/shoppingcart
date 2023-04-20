@@ -44,5 +44,5 @@ class ShoppingCart:
     def get_products_num(self):
         return len(self._shopping_dict.keys())
 
-    def reset_shopping_list(self):
+    def reset_shopping_cart(self):
         self._shopping_dict = {}

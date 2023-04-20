@@ -14,10 +14,10 @@
 {% endif %}
 <h3>Please select the desired action:</h3>
 <ul class="menu">
-    <li><a href="{{ url_for('add_product') }}">Add Product</a></li>
-    <li><a href="{{ url_for('update_product') }}">Update Product</a></li>
-    <li><a href="{{ url_for('remove_product') }}">Remove Product</a></li>
-    <li><a href="{{ url_for('view_shopping_list') }}">View Shopping List</a></li>
+    <li><a href="{{ url_for('manipulate.add_product') }}">Add Product</a></li>
+    <li><a href="{{ url_for('manipulate.update_product') }}">Update Product</a></li>
+    <li><a href="{{ url_for('manipulate.remove_product') }}">Remove Product</a></li>
+    <li><a href="{{ url_for('view.view_cart') }}">View Shopping Cart</a></li>
 </ul>
 {% endblock %}
 

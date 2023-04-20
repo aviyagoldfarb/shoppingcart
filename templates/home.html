@@ -10,11 +10,11 @@
 {% endwith %}
 <h1>Hello, I am your shopping assistant :)</h1>
 
-<image src="{{url_for('static', filename='images/shoppingcart.png')}}"></image>
+<image src="{{ url_for('static', filename='images/shoppingcart.png') }}"></image>
 
 <h2>If it's the first time you're using the shopping assistant, please press "signin" in order to continue:</h2>
-<a href="{{ url_for('signin') }}">Signin</a>
+<a href="{{ url_for('authenticate.signin') }}">Signin</a>
 
 <h2>Already registered as a user? please press "login" in order to continue:</h2>
-<a href="{{ url_for('login') }}">Login</a>
+<a href="{{ url_for('authenticate.login') }}">Login</a>
 {% endblock %}
